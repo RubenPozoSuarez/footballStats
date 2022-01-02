@@ -15,8 +15,7 @@ import lombok.AllArgsConstructor;
 public class CompetitionServiceImpl implements CompetitionService {
 
 	private CompetitionRepository competitionRepository;
-	
-	@Override
+
 	public List<Competition> getAllCompetitions() {
 		return competitionRepository.findAll();
 	}

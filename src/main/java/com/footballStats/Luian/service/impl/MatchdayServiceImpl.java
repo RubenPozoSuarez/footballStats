@@ -16,7 +16,6 @@ public class MatchdayServiceImpl implements MatchdayService {
 	
 	private MatchdayRepository matchdayRepository;
 	
-	@Override
 	public List<Matchday> getAllMatchdays() {
 		return matchdayRepository.findAll();
 	}

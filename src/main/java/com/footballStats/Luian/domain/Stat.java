@@ -1,5 +1,6 @@
 package com.footballStats.Luian.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,7 +24,8 @@ public class Stat {
 	
 	private int possesion;
 	private int foul;
-	private int shot_of_goal;
+	@Column(name="shot_of_goal")
+	private int shotOfGoal;
 	private int offside;
 	private int corner;
 	private int goal;

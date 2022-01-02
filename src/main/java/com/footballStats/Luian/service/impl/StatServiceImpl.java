@@ -16,7 +16,6 @@ public class StatServiceImpl implements StatService{
 
 	private StatRepository statRepository;
 
-	@Override
 	public List<Stat> getAllStats() {
 		return statRepository.findAll();
 	}

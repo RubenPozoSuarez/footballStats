@@ -2,6 +2,7 @@ package com.footballStats.Luian.domain;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -25,9 +26,10 @@ public class Season {
 	@GeneratedValue
 	private long id;
 	
-	private LocalDateTime date_start;
-	
-	private LocalDateTime date_end;
+	@Column(name="date_start")
+	private LocalDateTime start;
+	@Column(name="date_end")
+	private LocalDateTime end;
 	
 	@ManyToOne
 	@JoinColumn(name="fk_competition")
