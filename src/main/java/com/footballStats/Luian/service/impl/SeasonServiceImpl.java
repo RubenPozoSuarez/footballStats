@@ -16,7 +16,6 @@ public class SeasonServiceImpl implements SeasonService {
 
 	private SeasonRepository seasonRepository;
 	
-	@Override
 	public List<Season> getAllSeasons() {
 		return seasonRepository.findAll();
 	}

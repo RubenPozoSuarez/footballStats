@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -16,22 +16,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="season")
+@Table(name="matches")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Season {
+public class Matches {
 	@Id
 	@GeneratedValue
 	private long id;
-	
 	@Column(name="date_start")
 	private LocalDateTime start;
 	@Column(name="date_end")
 	private LocalDateTime end;
+
+	@OneToOne
+	@JoinColumn(name="fk_matchday")
+	private Matchday matchday;
 	
-	@ManyToOne
-	@JoinColumn(name="fk_competition")
-	private Competition competition;
+	@OneToOne
+	@JoinColumn(name="fk_local")
+	private TeamStat local;
+	
+	@OneToOne
+	@JoinColumn(name="fk_visitor")
+	private TeamStat visitor;
 }
