@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="t0005_matchday")
+@Table(name="matchday")
 @Getter
 @Setter
 @NoArgsConstructor

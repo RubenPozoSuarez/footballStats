@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="t0007_stat")
+@Table(name="stat")
 @Getter
 @Setter
 @NoArgsConstructor

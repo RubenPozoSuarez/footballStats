@@ -1,8 +1,5 @@
 package com.footballStats.Luian.domain;
 
-import java.time.LocalDateTime;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,29 +13,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="matches")
+@Table(name="teamstat")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Matches {
+public class TeamStat {
+
 	@Id
 	@GeneratedValue
 	private long id;
-	@Column(name="date_start")
-	private LocalDateTime start;
-	@Column(name="date_end")
-	private LocalDateTime end;
-
-	@OneToOne
-	@JoinColumn(name="fk_matchday")
-	private Matchday matchday;
 	
 	@OneToOne
-	@JoinColumn(name="fk_local")
-	private TeamStat local;
+	@JoinColumn(name="fk_team")
+	private Team team;
 	
 	@OneToOne
-	@JoinColumn(name="fk_visitor")
-	private TeamStat visitor;
+	@JoinColumn(name="fk_stat")
+	private Stat stat;
 }

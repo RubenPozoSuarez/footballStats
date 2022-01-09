@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="t0004_season")
+@Table(name="season")
 @Getter
 @Setter
 @NoArgsConstructor
